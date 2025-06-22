@@ -1,5 +1,5 @@
 [package]
-name = "nano-like"
+name = "vim-like-base"
 version = "0.1.0"
 edition = "2021"
 

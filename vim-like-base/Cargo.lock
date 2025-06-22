@@ -5,10 +5,10 @@ version = 4
 [[package]]
 name = "TerimalRtdm"
 version = "0.0.4"
-source = "git+https://github.com/had2020/TerimalRtdm#fb7a04a1c9c2e7f117b38cf850f2c3829fd328a0"
+source = "git+https://github.com/had2020/TerimalRtdm#5a9d127c33aff56df5b6da0d89f36342727d7dbc"
 
 [[package]]
-name = "nano-like"
+name = "vim-like-base"
 version = "0.1.0"
 dependencies = [
  "TerimalRtdm",
