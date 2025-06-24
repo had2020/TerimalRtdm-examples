@@ -5,7 +5,7 @@ version = 4
 [[package]]
 name = "TerimalRtdm"
 version = "0.0.4"
-source = "git+https://github.com/had2020/TerimalRtdm#5a9d127c33aff56df5b6da0d89f36342727d7dbc"
+source = "git+https://github.com/had2020/TerimalRtdm#103920c63b925fdb9bafde736a7c0ff56511a22c"
 
 [[package]]
 name = "vim-like-base"
