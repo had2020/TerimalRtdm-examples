@@ -4,8 +4,9 @@ version = 4
 
 [[package]]
 name = "TerimalRtdm"
-version = "0.0.4"
-source = "git+https://github.com/had2020/TerimalRtdm#103920c63b925fdb9bafde736a7c0ff56511a22c"
+version = "0.0.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "287f038dcf10eb30142c4662ac3701b7031be15b760d604e6c85ef6dc7e5dea3"
 
 [[package]]
 name = "vim-like-base"

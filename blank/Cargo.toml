@@ -4,4 +4,4 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-TerimalRtdm = { git = "https://github.com/had2020/TerimalRtdm" }
+TerimalRtdm = "0.0.3"

@@ -1,9 +1,9 @@
 use ::TerimalRtdm::*;
 
 fn main() {
-    let mut app = App::new();
-    clear(&mut app);
-    raw_mode(true); // enabled for correct showing of elements at specific positions.
+    let mut app = App::new(); // Holds all interface state variables.
+    clear(&mut app); // Clear the screen competely.
+    raw_mode(true); // Enabled for correct showing of elements at specific positions.
     show_cursor(false); // By default it is set to show. The cursor is off, since we don't need to move it.
 
     loop {
