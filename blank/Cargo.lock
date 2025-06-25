@@ -5,10 +5,10 @@ version = 4
 [[package]]
 name = "TerimalRtdm"
 version = "0.0.4"
-source = "git+https://github.com/had2020/TerimalRtdm#6b0535b91bc6f962aef584bf924f6a01f21dced7"
+source = "git+https://github.com/had2020/TerimalRtdm#04d6f5204e5a34393df73934af3b5dcb8818aa38"
 
 [[package]]
-name = "animated"
+name = "blank"
 version = "0.1.0"
 dependencies = [
  "TerimalRtdm",
