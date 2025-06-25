@@ -21,25 +21,20 @@ fn main() {
         }
 
         // animation
+        let mut last_color = Color::Blue;
         loop {
-            collect_presses(&mut app);
+            let mut cycle_color = Color::Black;
+            if last_color == Color::Blue {}
 
             Text::new()
                 .foreground(Color::Black)
                 .style(Style::Bold)
                 .show(&mut app, "TerimalRtdm", pos!(0, 0));
+
             sleep(Duration::from_millis(500));
 
-            if Key::o()
-                .no_clear()
-                .case_sen(true)
-                .pressed(&mut app, KeyType::Q)
-            {
-                break;
-            }
+            render(&app);
         }
-
-        render(&app);
     }
 
     raw_mode(false);
