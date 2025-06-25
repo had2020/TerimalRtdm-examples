@@ -9,33 +9,57 @@ fn main() {
     raw_mode(true);
     clear(&mut app);
 
+    real_cursor_visibility(false);
+
+    // animation
+    let mut last_color = Color::Blue;
     loop {
-        collect_presses(&mut app);
-
-        if Key::o()
-            .no_clear()
-            .case_sen(true)
-            .pressed(&mut app, KeyType::Q)
-        {
-            break;
+        let mut cycle_color = Color::Black;
+        if last_color == Color::Blue {
+            cycle_color = Color::Red
+        } else {
+            cycle_color = Color::Blue
         }
+        last_color = cycle_color;
 
-        // animation
-        let mut last_color = Color::Blue;
-        loop {
-            let mut cycle_color = Color::Black;
-            if last_color == Color::Blue {}
+        Text::new().foreground(cycle_color).style(Style::Bold).show(
+            &mut app,
+            "   ▄▄▄▄▀ ▄███▄   █▄▄▄▄ ▄█ █▀▄▀█ ██   █     █▄▄▄▄    ▄▄▄▄▀ ██▄   █▀▄▀█ ",
+            pos!(0, 0),
+        );
+        Text::new().foreground(cycle_color).style(Style::Bold).show(
+            &mut app,
+            "▀▀▀ █    █▀   ▀  █  ▄▀ ██ █ █ █ █ █  █     █  ▄▀ ▀▀▀ █    █  █  █ █ █ ",
+            pos!(0, 1),
+        );
+        Text::new().foreground(cycle_color).style(Style::Bold).show(
+            &mut app,
+            "    █    ██▄▄    █▀▀▌  ██ █ ▄ █ █▄▄█ █     █▀▀▌      █    █   █ █ ▄ █ ",
+            pos!(0, 2),
+        );
+        Text::new().foreground(cycle_color).style(Style::Bold).show(
+            &mut app,
+            "   █     █▄   ▄▀ █  █  ▐█ █   █ █  █ ███▄  █  █     █     █  █  █   █ ",
+            pos!(0, 3),
+        );
+        Text::new().foreground(cycle_color).style(Style::Bold).show(
+            &mut app,
+            "  ▀      ▀███▀     █    ▐    █     █     ▀   █     ▀      ███▀     █  ",
+            pos!(0, 4),
+        );
+        Text::new().foreground(cycle_color).style(Style::Bold).show(
+            &mut app,
+            "                  ▀         ▀     █         ▀                     ▀   ",
+            pos!(0, 5),
+        );
+        Text::new().foreground(cycle_color).style(Style::Bold).show(
+            &mut app,
+            "                                 ▀                                   ",
+            pos!(0, 6),
+        );
 
-            Text::new()
-                .foreground(Color::Black)
-                .style(Style::Bold)
-                .show(&mut app, "TerimalRtdm", pos!(0, 0));
+        sleep(Duration::from_millis(500));
 
-            sleep(Duration::from_millis(500));
-
-            render(&app);
-        }
+        render(&app);
     }
-
-    raw_mode(false);
 }
