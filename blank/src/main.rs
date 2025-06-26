@@ -1,4 +1,4 @@
-use ::TerimalRtdm::*;
+use TerimalRtdm::*;
 
 fn main() {
     let mut app = App::new(); // Holds all interface state variables.
